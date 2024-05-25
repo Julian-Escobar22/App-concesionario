@@ -8,15 +8,15 @@ import 'package:project_final/modules/authentication/screens/onboarding/widgets/
 import 'package:project_final/utils/constants/image_strings.dart';
 import 'package:project_final/utils/constants/text_strings.dart';
 
-
 class OnBoardingScreen extends StatelessWidget {
-  const OnBoardingScreen({super.key});
+  const OnBoardingScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(OnBoardingController());
 
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 213, 190, 156), // Gris claro
       body: Stack(
         children: [
           /// Horizontal scrollable pages

@@ -17,12 +17,12 @@ class AppLocalizationsEs extends AppLocalizations {
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
-        'onBoardingTitle1': 'Elija su producto',
-        'onBoardingSubTitle1': 'Bienvenido a un mundo de opciones ilimitadas: ¡su producto perfecto le espera!',
-        'onBoardingTitle2': 'Seleccione el método de pago',
-        'onBoardingSubTitle2': 'Para realizar transacciones sin problemas, elija su forma de pago',
-        'onBoardingTitle3': 'Entrega a domicilio',
-        'onBoardingSubTitle3': '¡Entrega rápida, segura y sin contacto!',
+        'onBoardingTitle1': '¡Bienvenido a nuestro concesionario!',
+        'onBoardingSubTitle1': 'Estaremos encantados de mostrarte todas nuestras opciones y toda la informacion de los vehiculos: ¡su vehiculo perfecto le espera!',
+        'onBoardingTitle2': '¡Contamos con planes de financiamiento!',
+        'onBoardingSubTitle2': 'Conoce la nueva BMW X1, ¡MAS PODER! Y MAS ESTILO!',
+        'onBoardingTitle3': 'Encuentranos en Pasto nueva apertura Avenida los estudiantes',
+        'onBoardingSubTitle3': '¡Preparate para conocer un mundo de posibilidades!',
         'other': '',
       },
     );
@@ -34,12 +34,12 @@ class AppLocalizationsEs extends AppLocalizations {
     String _temp0 = intl.Intl.selectLogic(
       name,
       {
-        'loginTitle': 'Bienvenido de nuevo,',
-        'loginSubTitle': 'Descubra opciones ilimitadas y una comodidad inigualable.',
+        'loginTitle': 'Bienvenido, Inicia sesion para brindarte un mejor asesoramiento',
+        'loginSubTitle': 'Descubra los mejores automoviles y Motos de todas las marcas. ¡A los mejores precios!',
         'email': 'Correo electrónico',
         'password': 'Contraseña',
         'rememberMe': 'Recuérdame',
-        'forgetPassword': 'Recuperar contraseña?',
+        'forgetPassword': '',
         'signIn': 'Iniciar sesión',
         'createAccount': 'Crear cuenta',
         'orSignInWith': 'O inicie sesión con',

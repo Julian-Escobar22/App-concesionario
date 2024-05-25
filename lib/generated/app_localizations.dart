@@ -108,13 +108,13 @@ abstract class AppLocalizations {
   /// No description provided for @onboarding.
   ///
   /// In es, this message translates to:
-  /// **'{name, select, onBoardingTitle1{Elija su producto} onBoardingSubTitle1{Bienvenido a un mundo de opciones ilimitadas: ¡su producto perfecto le espera!} onBoardingTitle2{Seleccione el método de pago} onBoardingSubTitle2{Para realizar transacciones sin problemas, elija su forma de pago} onBoardingTitle3{Entrega a domicilio} onBoardingSubTitle3{¡Entrega rápida, segura y sin contacto!} other{}}'**
+  /// **'{name, select, onBoardingTitle1{¡Bienvenido a nuestro concesionario!} onBoardingSubTitle1{Estaremos encantados de mostrarte todas nuestras opciones y toda la informacion de los vehiculos: ¡su vehiculo perfecto le espera!} onBoardingTitle2{¡Contamos con planes de financiamiento!} onBoardingSubTitle2{Conoce la nueva BMW X1, ¡MAS PODER! Y MAS ESTILO!} onBoardingTitle3{Encuentranos en Pasto nueva apertura Avenida los estudiantes} onBoardingSubTitle3{¡Preparate para conocer un mundo de posibilidades!} other{}}'**
   String onboarding(String name);
 
   /// No description provided for @login.
   ///
   /// In es, this message translates to:
-  /// **'{name, select, loginTitle{Bienvenido de nuevo,} loginSubTitle{Descubra opciones ilimitadas y una comodidad inigualable.} email{Correo electrónico} password{Contraseña} rememberMe{Recuérdame} forgetPassword{Recuperar contraseña?} signIn{Iniciar sesión} createAccount{Crear cuenta} orSignInWith{O inicie sesión con} other{}}'**
+  /// **'{name, select, loginTitle{Bienvenido, Inicia sesion para brindarte un mejor asesoramiento} loginSubTitle{Descubra los mejores automoviles y Motos de todas las marcas. ¡A los mejores precios!} email{Correo electrónico} password{Contraseña} rememberMe{Recuérdame} forgetPassword{} signIn{Iniciar sesión} createAccount{Crear cuenta} orSignInWith{O inicie sesión con} other{}}'**
   String login(String name);
 }
 
