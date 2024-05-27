@@ -16,10 +16,10 @@ class OnBoardingScreen extends StatelessWidget {
     final controller = Get.put(OnBoardingController());
 
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 213, 190, 156), // Gris claro
+      backgroundColor: Color.fromARGB(255, 227, 208, 182), // Gris claro
       body: Stack(
         children: [
-          /// Horizontal scrollable pages
+          /// Horizontal scrollable pagesr
           PageView(
             controller: controller.pageController,
             onPageChanged: controller.updatePageIndicator,

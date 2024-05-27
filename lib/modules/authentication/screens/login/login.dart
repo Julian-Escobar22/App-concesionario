@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Color(0xFFF5F5DC), // Beige claro
+          color: Color.fromARGB(255, 167, 220, 124), // Beige claro
         ),
         child: SingleChildScrollView(
           child: Padding(
