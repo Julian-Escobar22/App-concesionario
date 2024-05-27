@@ -63,8 +63,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 /// Form
                 Form(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      vertical: AppSizes.spaceBtwSections,
+                    padding: const EdgeInsets.only(
+                      top: AppSizes.spaceBtwSections * 2,
                     ),
                     child: Column(
                       children: [
@@ -74,9 +74,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           decoration: InputDecoration(
                             prefixIcon: const Icon(Iconsax.direct_right),
                             labelText: AppText.email,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
                           ),
                         ),
-                        const SizedBox(height: AppSizes.spaceBtwInputFields),
+                        const SizedBox(height: AppSizes.spaceBtwInputFields * 1.5),
 
                         /// Password
                         TextFormField(
@@ -85,6 +88,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           decoration: InputDecoration(
                             prefixIcon: const Icon(Iconsax.password_check),
                             labelText: AppText.password,
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
                             suffixIcon: IconButton(
                               icon: Icon(
                                 _obscurePassword ? Iconsax.eye_slash : Iconsax.eye,
@@ -97,28 +103,17 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ),
                         ),
-                        const SizedBox(height: AppSizes.spaceBtwInputFields / 2),
+                        const SizedBox(height: AppSizes.spaceBtwInputFields),
 
-                        /// Remember Me and Forget Password
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            /// Remember me
-                            Row(
-                              children: [
-                                Checkbox(value: false, onChanged: (value) {}),
-                                Text(AppText.rememberMe),
-                              ],
-                            ),
-
-                            /// Forget Password
-                            TextButton(
-                              onPressed: () {},
-                              child: Text(AppText.forgetPassword),
-                            ),
-                          ],
+                        /// Forget Password
+                        Align(
+                          alignment: Alignment.centerRight,
+                          child: TextButton(
+                            onPressed: () {},
+                            child: Text(AppText.forgetPassword),
+                          ),
                         ),
-                        const SizedBox(height: AppSizes.spaceBtwSections),
+                        const SizedBox(height: AppSizes.spaceBtwSections * 1.5),
 
                         /// Sign In Button
                         SizedBox(
@@ -130,61 +125,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: Text(AppText.signIn),
                           ),
                         ),
-                        const SizedBox(height: AppSizes.spaceBtwItems),
-
-                        /// Create Account Button
-                        SizedBox(
-                          width: double.infinity,
-                          child: OutlinedButton(
-                            onPressed: () {},
-                            child: Text(AppText.createAccount),
-                          ),
-                        ),
                       ],
                     ),
                   ),
                 ),
-
-                /// Divider
-                FormDivider(dividerText: AppText.orSignInWith.capitalize!),
-                const SizedBox(height: AppSizes.spaceBtwSections),
-
-                /// Footer
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.grey),
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: const Image(
-                          width: AppSizes.iconMd,
-                          height: AppSizes.iconMd,
-                          image: AssetImage(AppImage.google),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: AppSizes.spaceBtwItems),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(color: AppColors.grey),
-                        borderRadius: BorderRadius.circular(100),
-                      ),
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: const Image(
-                          width: AppSizes.iconMd,
-                          height: AppSizes.iconMd,
-                          image: AssetImage(AppImage.facebook),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: AppSizes.spaceBtwItems * 2), 
+                const SizedBox(height: AppSizes.spaceBtwItems * 2),
               ],
             ),
           ),

@@ -17,33 +17,34 @@ class OnBoardingPage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(AppSizes.defaultSpace),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: double.infinity,
-            margin: EdgeInsets.only(bottom: 20.0),
+            width: HelperFunctions.screenWidth() * 0.7,
+            margin: const EdgeInsets.only(bottom: 20.0),
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 175, 116, 84), // Usar el color de fondo del login
+              color: Color.fromARGB(255, 255, 231, 221),
               borderRadius: BorderRadius.circular(16.0),
             ),
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(8.0), // Reducir el padding interno
               child: Image(
-                width: HelperFunctions.screenWidth() * 0.6,
-                height: HelperFunctions.screenHeight() * 0.4,
+                width: HelperFunctions.screenWidth() * 0.5, // Reducir el ancho de la imagen
+                height: HelperFunctions.screenHeight() * 0.3, // Reducir la altura de la imagen
                 image: AssetImage(image),
               ),
             ),
           ),
-          SizedBox(height: 10.0),
+          const SizedBox(height: 10.0),
           Text(
             title,
             style: Theme.of(context).textTheme.headline5!.copyWith(fontSize: 24.0), // Ajustar el tamaño del título según sea necesario
             textAlign: TextAlign.center,
           ),
-          SizedBox(height: 10.0),
+          const SizedBox(height: 10.0),
           Text(
             subTitle,
-            style: Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: 18.0), // Ajustar el tamaño del texto según sea necesario
+            style: Theme.of(context).textTheme.subtitle1!.copyWith(fontSize: 18.0), 
             textAlign: TextAlign.center,
           ),
         ],

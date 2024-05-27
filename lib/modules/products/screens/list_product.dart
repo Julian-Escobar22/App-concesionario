@@ -14,6 +14,7 @@ class _ListProductState extends State<ListProduct> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFF5F5DC), // Fondo beige
       body: Padding(
         padding: TSpacingStyles.paddingWithAppBarHeight,
         child: RefreshIndicator(
@@ -27,52 +28,49 @@ class _ListProductState extends State<ListProduct> {
               if (snapshot.hasData) {
                 final data = snapshot.data;
 
-                return GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    mainAxisSpacing: 21.0,
-                    crossAxisSpacing: 15.0,
-                  ),
+                return ListView.builder(
                   itemCount: data?.length,
                   itemBuilder: (BuildContext context, int index) {
                     /// Card product
                     return Card(
                       elevation: 1,
-                      child: Column(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: AspectRatio(
-                              aspectRatio: 16 / 9,
-                              child: Image(
-                                fit: BoxFit.cover,
-                                image: NetworkImage(data?[index]['img']),
+                      margin: const EdgeInsets.symmetric(vertical: 10.0),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(10),
+                              child: AspectRatio(
+                                aspectRatio: 16 / 9,
+                                child: Image(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage(data?[index]['img']),
+                                ),
                               ),
                             ),
-                          ),
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
+                            const SizedBox(height: 10),
+                            Text(
                               data?[index]['title'],
                               textAlign: TextAlign.left,
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(
                                 color: AppColors.primary,
+                                fontSize: 18.0, // Ajustar el tamaño del texto si es necesario
                               ),
                             ),
-                          ),
-                          const SizedBox(height: 5),
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
+                            const SizedBox(height: 5),
+                            Text(
                               data?[index]['price'].toString() ?? '',
                               style: const TextStyle(
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.bold,
+                                fontSize: 16.0, // Ajustar el tamaño del texto si es necesario
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     );
                   },
